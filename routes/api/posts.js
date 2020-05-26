@@ -188,7 +188,6 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
         return res.status(404).json({ msg: 'Post not found' });
         
         const comment = post.comments.find(comment => comment.user.toString() === req.user.id);
-
         if(!comment)
         return res.status(404).json({ msg: 'Comment not found' });
         
