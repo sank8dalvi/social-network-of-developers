@@ -14,6 +14,8 @@ import Dashboard from './components/dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
 import CreateProfile from './components/layout/profile-forms/CreateProfile';
 import EditProfile from './components/layout/profile-forms/EditProfile';
+import AddExperience from './components/layout/profile-forms/AddExperience';
+import AddEducation from './components/layout/profile-forms/AddEducation';
 
 if(localStorage.token){
   setAuthToken(localStorage.token)
@@ -24,7 +26,7 @@ const App = () => {
   useEffect(() => {
     store.dispatch(loadUser())
   }, [])
-
+  
   return(
     <Provider store={store}>
       <Router>
@@ -39,6 +41,8 @@ const App = () => {
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 <PrivateRoute exact path="/create-profile" component={CreateProfile} />
                 <PrivateRoute exact path="/edit-profile" component={EditProfile} />
+                <PrivateRoute exact path="/add-experience" component={AddExperience} />
+                <PrivateRoute exact path="/add-education" component={AddEducation} />
               </Switch>
             </section>
         </>
