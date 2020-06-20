@@ -16,7 +16,6 @@ import CreateProfile from './components/layout/profile-forms/CreateProfile';
 import EditProfile from './components/layout/profile-forms/EditProfile';
 import AddExperience from './components/layout/profile-forms/AddExperience';
 import AddEducation from './components/layout/profile-forms/AddEducation';
-import ProfileItem from './components/profiles/ProfileItem';
 import Profiles from './components/profiles/Profiles';
 
 if(localStorage.token){

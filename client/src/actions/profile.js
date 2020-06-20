@@ -213,7 +213,7 @@ export const deleteAccount = () => async dispatch => {
     if(window.confirm("Are you sure? This can't be undone")){
 
     try {
-        await axios.delete(`/api/profile`)
+        axios.delete(`/api/profile`)
 
         dispatch({ type: ACCOUNT_DELETED })
         dispatch(setAlert("Your account has been permanently deleted"))

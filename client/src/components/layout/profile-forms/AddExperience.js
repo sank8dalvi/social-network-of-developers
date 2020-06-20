@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { addExperience } from '../../../actions/profile'
 
 const AddExperience = ({ addExperience, history }) => {
@@ -52,7 +52,7 @@ const AddExperience = ({ addExperience, history }) => {
                 <p><input type="checkbox" name="current" checked={current} value={current} onChange={e=> {
                     setformData({ ...formData, current: !current}); 
                     toggleDateDisabled(!toDataDisabled);
-                }} value="" /> Current Job</p>
+                }} /> Current Job</p>
                 </div>
                 <div className="form-group">
                 <h4>To Date</h4>

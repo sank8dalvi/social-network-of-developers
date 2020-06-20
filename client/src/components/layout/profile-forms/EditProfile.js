@@ -52,7 +52,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
             youtube: loading || !profile.social ? '' : profile.social.youtube,
             instagram: loading || !profile.social ? '' : profile.social.instagram,
         })
-    }, [loading])
+    }, [loading, getCurrentProfile])
 
     const onChange = e => setformData({...formData, [e.target.name]: e.target.value})
     const onsubmit = e => {
