@@ -118,3 +118,6 @@ dist
 
 # Custom files
 default.json
+
+# Public files
+build
